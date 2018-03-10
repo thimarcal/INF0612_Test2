@@ -1,6 +1,6 @@
 ########################################
 # Teste 2b - INF-0612          
-# Nome(s): Rafael Fernando Ribeiro
+# Nome(s): Os resultados bateram!
 ########################################
 
 ids <- c(172742, 172773, 172825, 172839, 172967, 173149, 173204, 173370, 174096, 174355, 174437, 174487, 174488, 174928, 175380, 175832, 176859, 176914, 176940, 177388, 177554, 177609, 177643, 177825, 177925, 178085, 178137, 178377, 178397, 178525, 178664, 178674, 178740, 178779, 181987, 182039, 182049, 182901, 183024, 183143, 183517, 183984, 184400, 185247, 185820, 186218, 187014, 187217, 188078, 188494, 188548)
@@ -21,6 +21,7 @@ rowMins <- function(m) {
 # 1
 alunos <- data.frame("id"= ids, "p1"=p1, "p2" = p2, "p3" = p3, "p4" = p4)
 
+# vc usou a função conforme o Zanoni pediu
 # 2 - Need to confirm if can use apply function
 maioresnotas <- t(apply(alunos[,-1],1,sort))[,-1]
 maioresnotas <- maioresnotas^2
@@ -34,7 +35,7 @@ medquad <- maioresnotas
 #maioresnotas <- t(signif(maioresnotas, digits=3))
 
 
-# 3
+# 3 - vi que no seu ficou faltando somente o p no nome
 mp1 <- mean(alunos$p1)
 mp2 <- mean(alunos$p2)
 mp3 <- mean(alunos$p3)

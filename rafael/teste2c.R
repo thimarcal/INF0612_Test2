@@ -27,12 +27,12 @@ acumCamp <- sum(df[df$cidade == 'Campinas',3])
 acumLim <- sum(df[df$cidade == 'Limeira',3])
 acumVin <- sum(df[df$cidade == 'Vinhedo',3])
 
-# 4
+# 4 - entendi errado, o seu esta correto
 dmaxCamp <- max(df$dia[df$cidade == 'Campinas',3])
 dmaxLim <- max(df$dia[df$cidade == 'Limeira',3])
 dmaxVin <- max(df$dia[df$cidade == 'Vinhedo',3])
 
-# 5
+# 5 - entendi errado, o seu esta correto
 dminCamp <- min(df$dia[df$cidade == 'Campinas',3])
 dminLim <- min(df$dia[df$cidade == 'Limeira',3])
 dminVin <- min(df$dia[df$cidade == 'Vinhedo',3])

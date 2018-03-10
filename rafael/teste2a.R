@@ -20,14 +20,15 @@ setdiff(C,L)
 setdiff(V,C)
 
 ## Quais os produtos que sao vendidos em pelo menos uma cidade?
-# 3
+# 3 - o meu acredito estar errado
 unique(c(C,V,L))
 
 ## Quais os produtos que sao vendidos em todas as cidades?
-# 4
+# 4 - o seu ficou bem melhor! o meu acredito estar errado
 unique(c(C,V,L)[duplicated(c(C,V,L))])
 
 ## Se a filial de Limeira parar a distribuicao de produtos, a filial de Campinas 
 ## possui todos os itens necessarios para atender a demanda de Limeira? 
 # 5
 setequal(intersect(L,C),L)
+
