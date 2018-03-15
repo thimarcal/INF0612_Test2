@@ -1,6 +1,7 @@
 ########################################
 # Teste 2a - INF-0612          
-# Nome(s): 
+# Nome(s): Rafael Fernando Ribeiro
+#          Thiago Gomes Marçal Pereira
 ########################################
 
 ## Os vetores C, L e V representam os produtos distribuidos nas cidades de Campinas, Limeira e Vinhedo, respectivamente.
@@ -26,3 +27,5 @@ intersect(intersect(C,V),L)
 ## Se a filial de Limeira parar a distribuicao de produtos, a filial de Campinas 
 ## possui todos os itens necessarios para atender a demanda de Limeira? 
 setequal(intersect(L, C), L)
+
+

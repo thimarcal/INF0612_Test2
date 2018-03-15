@@ -1,6 +1,7 @@
 ########################################
 # Teste 2c - INF-0612          
-# Nome(s): 
+# Nome(s): Rafael Fernando Ribeiro
+#          Thiago Gomes Marçal Pereira
 ########################################
 
 

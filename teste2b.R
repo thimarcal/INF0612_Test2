@@ -1,6 +1,7 @@
 ########################################
 # Teste 2b - INF-0612          
-# Nome(s): 
+# Nome(s): Rafael Fernando Ribeiro
+#          Thiago Gomes Marçal Pereira
 ########################################
 
 ids <- c(172742, 172773, 172825, 172839, 172967, 173149, 173204, 173370, 174096, 174355, 174437, 174487, 174488, 174928, 175380, 175832, 176859, 176914, 176940, 177388, 177554, 177609, 177643, 177825, 177925, 178085, 178137, 178377, 178397, 178525, 178664, 178674, 178740, 178779, 181987, 182039, 182049, 182901, 183024, 183143, 183517, 183984, 184400, 185247, 185820, 186218, 187014, 187217, 188078, 188494, 188548)
@@ -22,30 +23,30 @@ rowMins <- function(m) {
  apply(m, 1, min)
 }
 
-#Você deve criar um data frame utilizando os vetores fornecidos e sempre que utilizar algum dado
-#já existente no arquivo referir-se a este data frame (ou seja, você só pode utilizar os vetores fornecidos para
-#                                                      criar este data frame).
+## Você deve criar um data frame utilizando os vetores fornecidos e sempre que utilizar algum dado
+## já existente no arquivo referir-se a este data frame (ou seja, você só pode utilizar os vetores fornecidos para
+##                                                      criar este data frame).
 gradesTable <- data.frame("ids"=ids, "p1"=p1, "p2"=p2, "p3"=p3, "p4"=p4)
 
-#Você deve salvar no vetor “medquad” a média final de cada aluno (média quadrática das provas,
-#desconsiderando a menor nota obtida), com duas casas decimais.
+## Você deve salvar no vetor “medquad” a média final de cada aluno (média quadrática das provas,
+## desconsiderando a menor nota obtida), com duas casas decimais.
 medquad <- round(sqrt((rowSums(gradesTable[1:length(gradesTable$ids), c(2:5)]^2)-(rowMins(gradesTable[1:length(gradesTable$ids), c(2:5)])^2))/3), digits = 2)
 
-#Você deve salvar nas variáveis “mp1”, “mp2”, “mp3” e “mp4” a média aritmética das notas das provas
-#1, 2, 3 e 4, respectivamente.
-m1 <- mean(gradesTable$p1)
-m2 <- mean(gradesTable$p2)
-m3 <- mean(gradesTable$p3)
-m4 <- mean(gradesTable$p4)
+## Você deve salvar nas variáveis “mp1”, “mp2”, “mp3” e “mp4” a média aritmética das notas das provas
+## 1, 2, 3 e 4, respectivamente.
+mp1 <- mean(gradesTable$p1)
+mp2 <- mean(gradesTable$p2)
+mp3 <- mean(gradesTable$p3)
+mp4 <- mean(gradesTable$p4)
 
-#Você deve salvar nas variáveis “dp1”, “dp2”, “dp3” e “dp4” o desvio padrão das notas das provas
-#1, 2, 3 e 4, respectivamente.
+## Você deve salvar nas variáveis “dp1”, “dp2”, “dp3” e “dp4” o desvio padrão das notas das provas
+## 1, 2, 3 e 4, respectivamente.
 dp1 <- sd(gradesTable$p1)
 dp2 <- sd(gradesTable$p2)
 dp3 <- sd(gradesTable$p3)
 dp4 <- sd(gradesTable$p4)
 
-#Você deve salvar na variável “notasrank” os registros acadêmicos dos alunos tal que na primeira
-#posição conste o registro acadêmico do aluno com a maior média final, na segunda posição conste o registro
-#acadêmico do aluno com a segunda maior média final, e assim por diante.
+## Você deve salvar na variável “notasrank” os registros acadêmicos dos alunos tal que na primeira
+## posição conste o registro acadêmico do aluno com a maior média final, na segunda posição conste o registro
+## acadêmico do aluno com a segunda maior média final, e assim por diante.
 notasrank <- gradesTable$ids[order(medquad,decreasing = TRUE)]
